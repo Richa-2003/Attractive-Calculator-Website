@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BMI Calculation</title>
+   
+    <style>
+
+      *{
+        margin: 0;
+        padding: 0;
+      }
+
+      body{
+        background-image: url("BI4.webp");
+        width: 100%;
+       height: 100%;
+       background-size: cover;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      }
+
+      header{
+            background-color: rgb(13, 13, 63);
+            color: beige;
+            height: 50px;
+            text-align: center;
+            font-size: 2rem;
+            padding: 10px;
+            margin-top: -24px;
+        }
+
+        .nav{
+            padding: 10px;
+            height: 1cm;
+           color: black;
+           background-color: white;
+          
+        }
+
+        ul {
+           display: flex;
+           gap: 30px;
+         list-style-type: none;
+         padding: 0; 
+         margin: 0;
+          
+        }
+
+        ul a {
+            color: black;
+            text-decoration: none;
+        }
+        
+
+        .container{
+    
+          background-color: rgb(8, 166, 169);
+          padding: 2rem;
+          border-radius: 2rem;
+          min-height: 35vh;
+          width: 35vh;
+          margin-left: 60%;
+          border-style:outset;
+        }
+
+
+img{
+  size: 100px;
+  margin-left: 80px;
+  margin-top: -60px;
+}
+
+.section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.left-section {
+    flex: 1;
+    padding: 20px;
+    margin-left: 50px;
+}
+
+.right-section {
+    flex: 2;
+    padding: 20px;
+    margin-top: -50px;
+    margin-right: 20%;
+}
+
+
+input[type="number"], input[type="text"], button {
+    margin: 10px;
+    padding: 5px;
+}
+
+ input{
+  border-radius: 0.3rem;
+}
+
+footer{
+  color: white;
+  background-color:  rgb(73, 73, 73);
+  height: 1.2cm;
+  text-align: center;
+  font-size: 0.9rem;
+}
+
+button{
+  border-radius:5px;
+}
+
+button:hover{
+  color: white;
+  background-color:  rgb(6, 5, 52);
+}
+
+#img2{
+        height: 22px;
+        width: 22px;
+        margin-top: 5px;
+      }
+
+      footer {
+        color: white;
+        background-color: rgb(73, 73, 73);
+        font-size: 0.9rem;
+        height: 2cm;
+        text-align: center;
+        margin-top: 50px;
+      }
+
+      footer a{
+        color: white;
+        text-decoration: none;
+      }
+      
+     
+    </style>
+</head>
+<body>
+<img>
+  
+  <header><b>BMI Calculator</b></header>  
+
+  <div class="nav"><ul>
+    <li><h3>CalcuEasy</h3></li>
+    <li><a href="Calculator.html"> Home</a></li>
+    <li><a href="BMI.html">BMI Calculator</a></li>
+    <li><a href="contact.html"> Contact us</a></li>
+    <li><a href="Help.html"> Help</a></li>
+</ul></div>
+  
+  <div class="section">
+    <div class="left-section">
+        <img src="bmi-img (1).png" alt="BMI Chart">
+    </div>
+    <div class="right-section">
+      <div class="container">
+        <label for="height">Height (cm):</label>
+         <input type="number" id="height"><br>
+         <label for="weight">Weight (kg):</label>
+         <input type="number" id="weight">
+         <button onclick="calculateBMI()">Calculate BMI</button>
+         <input type="text" id="result" readonly>
+       </div>
+      </div>  
+    </div>
+</div>
+
+
+<footer><br> For any query ,Contact through email: singhricha912@gmail.com <br>
+  <img id="img2" src="linkedin.png"> :<a href="https://www.linkedin.com/in/richa-794968250">Linkdin Profile</a>
+</footer>
+  
+  
+<script>
+  function calculateBMI() {
+    var height = document.getElementById('height').value;
+    var weight = document.getElementById('weight').value;
+
+    // Convert height to meters
+    var heightMeters = height / 100;
+
+    // Calculate BMI
+    var bmi = weight / (heightMeters * heightMeters);
+
+    // Display the result
+    document.getElementById('result').value = bmi.toFixed(2);
+    }
+
+</script>
+</body>
+</html>
+
+
+
+
+
